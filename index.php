@@ -1,8 +1,6 @@
 <?php
 $pesan_status = "";
-
-
-if (isset($_POST['btn_kirim'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['btn_kirim'])) {
 
     $nama = htmlspecialchars($_POST['txt_nama']);
     $email = htmlspecialchars($_POST['txt_email']);
